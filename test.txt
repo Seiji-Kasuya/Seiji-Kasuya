@@ -1,0 +1,34 @@
+スタート(start.jsp)から修正開始
+
+http://kfkmap20.amzn.ykgw.net/pc/jsp/start.jsp
+
+サンプルデータ
+Y9100000007E8276 //着荷
+100005490386 //内作着工
+0000144445009 //かんばん
+00000093633 //かんばん
+
+
+
+<body onload="textboxfocus()">
+<jsp:include page="pc_menu.html" /><hr>
+<%
+String strInput1 = request.getParameter("input1");
+
+%>
+
+<script type="text/javascript">
+<!--
+
+        function textboxfocus() {
+                // テキストボックスを取得
+                var input = document.getElementsByTagName('input');
+                for (var i = 0; i < input.length; i ++){
+                    if (input[i].type == 'text') break;
+                }
+                var textbox = input[i];
+                // テキストボックスにフォーカス
+                textbox.value = '';
+                textbox.focus();
+        }
+</script>
